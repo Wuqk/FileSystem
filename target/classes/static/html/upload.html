@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<body>
+<form id="uploadForm" enctype="multipart/form-data">
+    文件:<input id="file" type="file" name="file"/>
+</form>
+<button id="upload">上传文件</button>
+<button id="manager">管理文件</button>
+</body>
+<script type="text/javascript">
+    $(function () {
+        if (localStorage.getItem("state")!=1){
+            alert("请登录！")
+            location.href="login.html"
+        }
+        $("#manager").click(function () {
+            location.href="filemanager.html"
+        })
+        $("#upload").click(function () {
+            var formData = new FormData($('#uploadForm')[0]);
+            $.ajax({
+                type: 'post',
+                url: "http://localhost:8080/file/upLoad",
+                // url: "http://192.168.0.231:8080/file/upLoad",
+                data: formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                xhrFields: {
+                    withCredentials: true
+                },
+                success: function (msg) {
+                    if (eval(msg)==1){
+                        alert("上传成功！")
+                        location.href="filemanager.html"
+                    }else if (eval(msg)==0){
+                        alert("请选择文件!")
+                    } else {
+                        alert("上传失败！")
+                    }
+                },
+                error:function (msg) {
+                    alert("请登录！")
+                    location.href="login.html"
+                }
+            })
+        });
+    });
+</script>
+</html>

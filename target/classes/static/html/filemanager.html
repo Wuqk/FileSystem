@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+<table id="flist" style="text-align: center" align="center">
+    <tr>
+        <td>文件名</td>
+        <td colspan="2">操作</td>
+    </tr>
+</table>
+<div align="center"><button id="upload">上传文件</button></div>
+
+</body>
+<script type="text/javascript">
+        $(function () {
+            if (localStorage.getItem("state")!=1){
+                alert("请登录！")
+                location.href="login.html"
+            }
+            $.ajax({
+                type:"post",
+                // url:"http://192.168.0.231:8080/file/findAll",
+                url:"http://localhost:8080/file/findAll",
+                dataType:"json",
+                xhrFields: {
+                    withCredentials: true
+                },
+                success:function (msg) {
+                    var fileList = eval(msg)
+                    var node = ""
+                    for(var i=0;i<fileList.length;i++){
+                        node+="<tr>"
+                            +"<td>"+fileList[i].fname+"</td>"
+                            +"<td>"+"<a href='http://localhost:8080/file/downloadFile/?fid="+fileList[i].fid+"'><button onclick='dload("+fileList[i].fid+")'>下载</button></a>"+"</td>"
+                            // +"<td>"+"<a href='http://192.168.0.231:8080/file/downloadFile/?fid="+fileList[i].fid+"'><button onclick='dload("+fileList[i].fid+")'>下载</button></a>"+"</td>"
+                            +"<td>"+"<button onclick='del("+fileList[i].fid+")'>删除</button>"+"</td>"
+                            +"</tr>"
+                    }
+                    $("#flist").append(node)
+                },
+                error:function (msg) {
+                    alert("请登录！")
+                    location.href="login.html"
+                }
+            })
+        })
+        $("#upload").click(function () {
+            location.href="upload.html"
+        })
+
+        function del(fid){
+            $.ajax({
+                    type:"post",
+                    // url:"http://192.168.0.231:8080/file/delFile",
+                    url:"http://localhost:8080/file/delFile",
+                    data:{fid:fid},
+                    contextType:"application/json",
+                    dataType:"json",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success:function (msg) {
+                        var state = eval(msg);
+                        if (state==1){
+                            alert("文件已删除")
+                            location.reload()
+                        } else {
+                            alert("文件不存在")
+                        }
+                    }
+            })
+        }
+    </script>
+</html>

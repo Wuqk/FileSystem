@@ -1,0 +1,46 @@
+Manifest-Version: 1.0
+Class-Path: tomcat-embed-el-9.0.27.jar spring-context-5.2.1.RELEASE.ja
+ r mybatis-spring-boot-autoconfigure-2.1.1.jar jackson-annotations-2.1
+ 0.0.jar spring-data-keyvalue-2.2.1.RELEASE.jar aether-api-1.7.jar ple
+ xus-utils-3.2.0.jar aether-impl-1.7.jar spring-boot-starter-web-2.2.1
+ .RELEASE.jar spring-jcl-5.2.1.RELEASE.jar mybatis-spring-boot-starter
+ -2.1.1.jar plexus-io-3.1.1.jar jul-to-slf4j-1.7.29.jar netty-buffer-4
+ .1.43.Final.jar jakarta.validation-api-2.0.1.jar HikariCP-3.4.1.jar m
+ aven-shared-io-3.0.0.jar spring-session-data-redis-2.2.0.RELEASE.jar 
+ maven-archiver-3.4.0.jar aether-spi-1.7.jar log4j-to-slf4j-2.12.1.jar
+  snappy-0.4.jar maven-settings-3.0.jar snakeyaml-1.25.jar spring-aop-
+ 5.2.1.RELEASE.jar maven-jar-plugin-3.1.2.jar spring-webmvc-5.2.1.RELE
+ ASE.jar spring-context-support-5.2.1.RELEASE.jar sisu-guice-2.1.7-noa
+ op.jar spring-oxm-5.2.1.RELEASE.jar spring-expression-5.2.1.RELEASE.j
+ ar tomcat-embed-websocket-9.0.27.jar netty-resolver-4.1.43.Final.jar 
+ sisu-inject-bean-1.4.2.jar spring-boot-starter-validation-2.2.1.RELEA
+ SE.jar jboss-logging-3.4.1.Final.jar jackson-datatype-jdk8-2.10.0.jar
+  mybatis-spring-2.0.3.jar spring-data-redis-2.2.1.RELEASE.jar spring-
+ boot-starter-logging-2.2.1.RELEASE.jar logback-core-1.2.3.jar plexus-
+ classworlds-2.2.3.jar mybatis-3.5.3.jar spring-session-core-2.2.0.REL
+ EASE.jar plexus-component-annotations-1.5.5.jar lettuce-core-5.2.1.RE
+ LEASE.jar commons-compress-1.18.jar jackson-databind-2.10.0.jar maven
+ -compat-3.0.jar classmate-1.5.1.jar spring-boot-starter-data-redis-2.
+ 2.1.RELEASE.jar spring-web-5.2.1.RELEASE.jar plexus-sec-dispatcher-1.
+ 3.jar spring-tx-5.2.1.RELEASE.jar netty-transport-4.1.43.Final.jar ma
+ ven-artifact-3.0.jar netty-common-4.1.43.Final.jar netty-handler-4.1.
+ 43.Final.jar commons-io-2.5.jar jackson-module-parameter-names-2.10.0
+ .jar spring-core-5.2.1.RELEASE.jar reactor-core-3.3.0.RELEASE.jar sis
+ u-inject-plexus-1.4.2.jar spring-boot-starter-tomcat-2.2.1.RELEASE.ja
+ r spring-boot-autoconfigure-2.2.1.RELEASE.jar logback-classic-1.2.3.j
+ ar jakarta.annotation-api-1.3.5.jar maven-shared-utils-3.2.1.jar spri
+ ng-beans-5.2.1.RELEASE.jar mysql-connector-java-8.0.18.jar maven-sett
+ ings-builder-3.0.jar maven-repository-metadata-3.0.jar maven-model-bu
+ ilder-3.0.jar maven-model-3.0.jar spring-boot-starter-jdbc-2.2.1.RELE
+ ASE.jar plexus-interpolation-1.14.jar plexus-cipher-1.4.jar netty-cod
+ ec-4.1.43.Final.jar wagon-provider-api-2.10.jar reactive-streams-1.0.
+ 3.jar spring-data-commons-2.2.1.RELEASE.jar spring-boot-starter-json-
+ 2.2.1.RELEASE.jar spring-boot-2.2.1.RELEASE.jar slf4j-api-1.7.29.jar 
+ maven-plugin-api-3.0.jar log4j-api-2.12.1.jar maven-core-3.0.jar hibe
+ rnate-validator-6.0.18.Final.jar spring-boot-starter-2.2.1.RELEASE.ja
+ r aether-util-1.7.jar jackson-core-2.10.0.jar tomcat-embed-core-9.0.2
+ 7.jar plexus-archiver-4.1.0.jar file-management-3.0.0.jar xz-1.8.jar 
+ maven-aether-provider-3.0.jar spring-jdbc-5.2.1.RELEASE.jar jackson-d
+ atatype-jsr310-2.10.0.jar
+Main-Class: com.weqia.site.fileSystem.FilesystemApplication
+
